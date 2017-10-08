@@ -24,9 +24,13 @@ public class AverageGrade {
         grade5= getGrade();
         
         letterGrade1= getLetterGrade(grade1);
+        letterGrade2= getLetterGrade(grade2);
+        letterGrade3= getLetterGrade(grade3);
+        letterGrade3= getLetterGrade(grade4);
+        letterGrade3= getLetterGrade(grade5);
         
         System.out.printf("The average grade is %.1f", getAverage(grade1,grade2,grade3,grade4,grade5));
-        System.out.printf("%s", getLetterGrade(grade1));
+        System.out.printf("In the first course, you earned a mark of %d, which is a grade of %s%n", grade1, letterGrade1);
     }
         //This method will prompt user for grade and return the value as a double
      public static double getGrade(){
@@ -37,23 +41,22 @@ public class AverageGrade {
      public static double getAverage(double g1, double g2, double g3, double g4, double g5){
          return (g1+g2+g3+g4+g5)/5;
      }
-     public static String getLetterGrade(double g1){
+     public static String getLetterGrade(double g, String letterGrade1){
        
-         if (g1 >= 80.0){
-             String letterGrade1;
+         if (g >= 80.0){
            letterGrade1 = "A";
          }
-         else if (g1 >= 70.0){
-             String letterGrade1 = "B";
+         else if (g >= 70.0){
+           letterGrade1 = "B";
          }
-         else if (g1 >= 60.0){
-             String letterGrade1 = "C";
+         else if (g >= 60.0){
+           letterGrade1 = "C";
          }
-         else if (g1 >= 50.0){
-             String letterGrade1 = "D";
+         else if (g >= 50.0){
+           letterGrade1 = "D";
          }
          else {
-             String letterGrade1 = "F";
+           letterGrade1 = "F";
          }
         
          return letterGrade1;
