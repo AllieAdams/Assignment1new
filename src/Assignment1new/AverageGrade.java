@@ -13,7 +13,9 @@ import java.util.Scanner;
 public class AverageGrade {
     public static void main (String [] args){
         double grade1, grade2, grade3, grade4, grade5;
-        String letterGrade1, letterGrade2, letterGrade3, letterGrade4, letterGrade5;
+        String letterGrade1 = null, letterGrade2 = null, letterGrade3 = null, letterGrade4 = null, letterGrade5 = null;
+        
+        
         
         System.out.print("This program will calculate the average of five grades and convert them tp letters grades. \nEnter your grades in numeric form. I.e. 87 not eighty seven. \n");
         
@@ -23,11 +25,11 @@ public class AverageGrade {
         grade4= getGrade();
         grade5= getGrade();
         
-        letterGrade1= getLetterGrade(grade1);
-        letterGrade2= getLetterGrade(grade2);
-        letterGrade3= getLetterGrade(grade3);
-        letterGrade3= getLetterGrade(grade4);
-        letterGrade3= getLetterGrade(grade5);
+        letterGrade1= getLetterGrade(grade1, letterGrade1);
+        letterGrade2= getLetterGrade(grade2, letterGrade2);
+        letterGrade3= getLetterGrade(grade3, letterGrade3);
+        letterGrade3= getLetterGrade(grade4, letterGrade4);
+        letterGrade3= getLetterGrade(grade5, letterGrade5);
         
         System.out.printf("The average grade is %.1f", getAverage(grade1,grade2,grade3,grade4,grade5));
         System.out.printf("In the first course, you earned a mark of %d, which is a grade of %s%n", grade1, letterGrade1);
